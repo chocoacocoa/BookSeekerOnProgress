@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+    font-family: 'Product sans';
+    color: white;
+}
+#bookseeker{
+    position:relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 10%;
+    color: white;
+}
+#bookseeker span{
+    transform: translateY(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#bookseeker span.bs{
+    position: absolute;
+    opacity: 1;
+}
+#bookseeker span.full{
+    position: absolute;
+    opacity: 0;
+    transform: translateY(10px);
+}
+#bookseeker:hover .bs{
+    opacity: 0;
+    transform: translateY(-10px);
+}
+#bookseeker:hover .full{
+    opacity: 1;
+    transform: translateY(0);
+}
+#bookseeker .bs, .full{
+    font-size: 10vmin;
+}
+

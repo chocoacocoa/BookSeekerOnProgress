@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookSeeker Library</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    </head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: linear-gradient(45deg,#55e7fc,#755BEA);
+    background-size: 400%;
+   
+    animation: header-animation 5s infinite alternate;
+}
+@keyframes header-animation{
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
+        #image-track {
+            display: flex;
+            gap: 4vmin;
+            position: relative;
+        }
+        .image {
+            width: 40vmin;
+            height: 56vmin;
+            object-fit: cover;
+            object-position: 100% 0%;
+        }
+        .header{
+            position: absolute;
+            top: -1px;
+            color: white;
+            font-weight: bold;
+            font-family: "Product sans";
+            font-size:30px;
+            left: 20px;
+        }
+    </style>
+
+    <body>
+        <div class="header"> 
+            <h1>BookSeeker</h1>
+        </div>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="image" src="medias/ghost.jpg" draggable="false"/>
+            <img class="image" src="medias/PagpapakataoFilipino.jpg" draggable="false"/>
+            <img class="image" src="medias/2024-10-18-083359.jpg" draggable="false"/>
+            <img class="image" src="medias/ghost.jpg" draggable="false"/>
+            <img class="image" src="https://images.unsplash.com/photo-1727053850589-732559330974?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false"/>
+            <img class="image" src="https://images.unsplash.com/photo-1727053850589-732559330974?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false"/>
+            <img class="image" src="https://images.unsplash.com/photo-1727053850589-732559330974?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" draggable="false"/>
+        </div>
+
+        <script>
+            const track = document.getElementById("image-track");
+    
+            window.onmousedown = e => {
+                track.dataset.mouseDownAt = e.clientX;  
+            };
+    
+            window.onmousemove = e => {
+                if(track.dataset.mouseDownAt === "0") return;
+    
+                const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+                      maxDelta = window.innerWidth / 2;
+    
+                let percentage = (mouseDelta / maxDelta) * -100;
+                let nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
+
+                // Limit the percentage to prevent infinite scrolling
+                nextPercentage = Math.max(Math.min(nextPercentage, 0), -50);
+
+                track.dataset.percentage = nextPercentage;
+
+                // Animate the track's movement, keeping it horizontally centered (no vertical shift)
+                track.animate({
+                    transform: `translate(${nextPercentage}%, 0%)`
+                }, { duration: 1200, fill: "forwards" });
+
+                // Update the object position of each image with animation
+                for (const image of track.getElementsByClassName("image")) {
+                    image.animate({
+                        objectPosition: `${100 + nextPercentage}% center`
+                    }, { duration: 1200, fill: "forwards" });
+                }
+            };
+    
+            window.onmouseup = () => {
+                track.dataset.mouseDownAt = "0";
+                track.dataset.prevPercentage = track.dataset.percentage;
+            };
+        </script>
+    </body>
+</html>
