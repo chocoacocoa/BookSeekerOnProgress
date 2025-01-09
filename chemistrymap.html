@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<style>
+.paper{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin: 5vmin;
+ 
+}
+@media only screen and (max-width: 600px){
+    .paper{
+        height: 84vh;
+    }
+}
+.content{       
+    box-shadow: 0 0 100px red;
+    img{
+        width: 86vmin;
+    }
+
+}
+</style>
+
+
+<body>
+
+    <!-- Sidebar -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        <img src="medias/1bhslogo.png">
+    </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ol class="ulSidebar">
+            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="weblibrary.html"><i class="fas fa-book"></i>Library</a></li>
+            <li><a href="#"><i class="fas fa-info"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+        </ol>
+    </div>
+    <header>
+        <h1 id="bookseeker">BookSeeker</h1>
+    </header>
+
+    <div class="paper">
+        
+        <span class="content"> <img src="map2.PNG"> </span>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
