@@ -1,0 +1,2 @@
+AR/arMedias/iloveimg-converted.zip filter=lfs diff=lfs merge=lfs -text
+AR/arMedias filter=lfs diff=lfs merge=lfs -text

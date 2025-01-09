@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Sidebar -->
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar"> 
+    <header>Menu</header>
+    <ul class="ulSidebar">
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="weblibrary.html"><i class="fas fa-book"></i>Library</a></li>
+        <li><a href="#"><i class="fas fa-info"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+    </ul>
+</div>
+
+<header>
+    <h1>BookSeeker</h1>
+</header>
+<div class="div1">
+    <input class="input" title="Input the name of the book you're looking for." 
+           placeholder="Search here" id="name" onkeyup="filterItems()">
+    <h2 style="color: white; font-family: 'Product sans';">Seek your book</h2>
+</div>
+
+<ul id="itemList">
+    <li class="science" onclick="toggleInfo(this)" style="border-color: red;" >
+        Science
+        <div class="info">
+            <ul>
+                <li><a href="sciencemap.html"><button><h3>Science Section</h3></button></a></li>
+                <li><a href="https://drive.google.com/file/d/1K1U92v_L1CLaHinj1Z8TKAmcNKzNyUko/preview"><button><h3>Max Verstappen</h3></button></a></li>
+                <li><a href="medias/ghost.jpg"><button><h3>Ghost of Sparta</h3></button></a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- Add more list items as necessary -->
+</li>
+<li class="math" onclick="toggleInfo(this)" style="border-color: red;">
+    Math
+    <div class="info"></div>
+</li>
+<li class="english" onclick="toggleInfo(this)" style="border-color: red;">
+    English
+    <div class="info"></div>
+</li>
+<li class="dictionaries" onclick="toggleInfo(this)" style="border-color: red;">
+    Dictionaries
+    <div class="info"></div>
+</li>
+<li class="filipino" onclick="toggleInfo(this)" style="border-color: red;">
+    Filipino
+    <div class="info">
+        <ul>
+            <li><a href="filipinomap.html"><button><h3>Filipino Section</h3></button></a></li>
+            <li><a href="https://drive.google.com/file/d/1K1U92v_L1CLaHinj1Z8TKAmcNKzNyUko/preview"><button><h3>Max Verstappen</h3></button></a></li>
+            <li><a href="medias/ghost.jpg"><button><h3>Ghost of Sparta</h3></button></a></li>
+        </ul>
+    </div>
+</li>
+<li class="research" onclick="toggleInfo(this)" style="border-color: red;">
+    Research
+    <div class="info"></div>
+</li>
+<li class="programming" onclick="toggleInfo(this)" style="border-color: red;">
+    Programming
+    <div class="info"></div>
+</li>
+<li class="arts" onclick="toggleInfo(this)" style="border-color: red;">
+    Arts
+    <div class="info"></div>
+</li>
+<li>
+    <li class="Grade9PAGPAPAKATAO" onclick="toggleInfo(this)" style="border-color: red;">
+        Grade 9: PAGPAPAKATAO
+        <div class="info">
+            <img src="medias/PagpapakataoFilipino.jpg" class="infoimg">
+            <a href="filipinomap.html"><h3>go to map guide</h3></a>
+        </div>
+    </li>
+</li>
+</ul>
+
+<script>
+    function filterItems() {
+        const input = document.getElementById('name');
+        const filter = input.value.toLowerCase();
+        const items = document.querySelectorAll('#itemList li');
+
+        items.forEach(function(item) {
+            const text = item.firstChild.textContent || item.firstChild.innerText;
+            if (text.toLowerCase().includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+    function toggleInfo(item) {
+        const info = item.querySelector('.info');
+        info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+    }
+</script>
+
+</body>
+</html>

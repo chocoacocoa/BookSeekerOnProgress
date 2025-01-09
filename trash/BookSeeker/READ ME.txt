@@ -1,0 +1,11 @@
+READ ME
+
+It's Cholo.
+
+in order to use and to play with this code in your vscode or whatever IDE:
+1. extract the file which is you've done na.
+2. wag na aalisin sa folder yung mga contents ng code kasi nakacode na kung saan mahahanap at nakapwesto na
+3. its all connected na in one folder kaya wag na palitapatin or burahin yung mga ibang folders/files.
+4. ask mo nalang si Cholo whenever you lito lito.
+
+thanks.
