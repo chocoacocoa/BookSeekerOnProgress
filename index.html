@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Sidebar -->
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+    <img src="medias/1bhslogo.png">
+</label>
+<div class="sidebar"> 
+    <header>Menu</header>
+    <ol class="ulSidebar">
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="/AR/ar.html"><i class="fas fa-book"></i>Library</a></li>
+        <li><a href="#"><i class="fas fa-info"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
+    </ol>
+</div>
+
+<header>
+    <h1>BookSeeker</h1>
+   
+</header>
+<div class="div1">
+    <input class="input" title="Input the name of the book you're looking for." 
+           placeholder="Search here" id="name" onkeyup="filterItems()">
+    <h2 style="color: white; font-family: 'Product sans';">Seek your book</h2>
+</div>
+
+<ol id="itemList">
+
+
+
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    English Books
+    <div class="info">
+        <a href="filipinomap.html"><h3 class="mapguide">HUGHTON MIFFLIN: English</h3></a>
+    </div>
+</li>
+</li>
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Entrepreneurship
+    <div class="info">
+      
+        <a href="filipinomap.html"><h3 class="mapguide"> Philip Kolter: Principles of Marketing </h3></a>
+    </div>
+</li>
+</li>
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Filipino Books
+    <div class="info">
+  
+        <a href="filipinomap.html"><h4 class="mapguide">Batayang Aklat sa Edukasyon sa Pagpapkatao</h4></a>
+        <a href="filipinomap.html"><h4 class="mapguide">Batayang Aklat sa Panlipunan</h4></a>
+        <a href="filipinomap.html"><h4 class="mapguide">Grade 9: PAGPAPAKATAO (Edukasyon sa Pagpapakatao)</h4></a>
+        <a href="filipinomap.html"><h4 class="mapguide">Grade 9: PAG-UNLAD (Araling Panlipunan)</h4></a>
+        <a href="filipinomap.html"><h4 class="mapguide">MAGSAYSAY: The People’s President</h4></a>
+        <a href="filipinomap.html"><h4 class="mapguide">TUDLA 7: Mga Modyul sa Filipino Panitikang Rehiyonal</h4></a>
+
+    </div>
+</li>
+</li>
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Healthcare textbooks
+    <div class="info">
+        <a href="filipinomap.html"><h3 class="mapguide">Refference Materials on HIV, AIDS & STI for High School Students</h3></a>
+    </div>
+</li>
+</li>
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Science Books
+    <div class="info">
+      
+        <a href="filipinomap.html"><h3 class="mapguide">Addison-Wesley: Chemistry (Second Edition)</h3></a>
+        <a href="filipinomap.html"><h3 class="mapguide">Mark Robert Waldman & Chris Manning Phd: NeuroWisdom</h3></a>
+        <a href="filipinomap.html"><h3 class="mapguide">The Science Library: IV Our Earth, Oceanography, Weather</h3></a>
+        <a href="filipinomap.html"><h3 class="mapguide">Mysteries of Mind Space & Time: The Unexplained </h3></a>
+        <a href="filipinomap.html"><h3 class="mapguide">Campbell Biology</h3></a>
+    </div>
+</li>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+<script>    
+    function filterItems() {
+        const input = document.getElementById('name');
+        const filter = input.value.toLowerCase();
+        const items = document.querySelectorAll('#itemList li');
+
+        items.forEach(function(item) {
+            const text = item.firstChild.textContent || item.firstChild.innerText;
+            if (text.toLowerCase().includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+    function toggleInfo(item) {
+        const info = item.querySelector('.info');
+        info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+    }
+
+    
+</script>
+
+</body>
+</html>

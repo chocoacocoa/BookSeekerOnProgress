@@ -17,6 +17,9 @@ html, body{
     transition: all 0.2s ease-in-out;
     margin: 10%;
     color: white;
+
+    /* glassmorphism */
+    
 }
 #bookseeker span{
     transform: translateY(0);
@@ -41,6 +44,12 @@ html, body{
 }
 #bookseeker .bs, .full{
     font-size: 10vmin;
+    background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
@@ -64,6 +73,15 @@ body{
     left: 27vh;
     bottom: 28vh;
 }
+#arrowLeft{
+    width: 30vmin;
+    position: absolute;
+    z-index: -1;
+    display: none;
+    transform: rotate(131deg);
+    top: 65vh;
+    left: 17vh;
+}
 #hitbox{
     width: 27vmin;
     height: 74vmin;
@@ -71,6 +89,14 @@ body{
     right: 0;
     border: 10px solid white;
     top: 27vh;
+}
+#hitbox2{
+    width: 27vmin;
+    height: 37vmin;
+    position: absolute;
+    right: 13vh;
+    border: 10px solid white;
+    top: 41vh;
 }
 #libraryH3{
     font-size: 4vh;
