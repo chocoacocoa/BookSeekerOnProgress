@@ -1,117 +1,125 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    font-family: 'Product sans';
-    color: white;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+html,
+body {
+  font-family: "Product sans";
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-#bookseeker{
-    position:relative;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    margin: 10%;
-    color: white;
+#bookseeker {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 10%;
+  color: white;
 
-    /* glassmorphism */
-    
+  /* glassmorphism */
 }
-#bookseeker span{
-    transform: translateY(0);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+#bookseeker span {
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-#bookseeker span.bs{
-    position: absolute;
-    opacity: 1;
+#bookseeker span.bs {
+  position: absolute;
+  opacity: 1;
 }
-#bookseeker span.full{
-    position: absolute;
-    opacity: 0;
-    transform: translateY(10px);
+#bookseeker span.full {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(10px);
 }
-#bookseeker:hover .bs{
-    opacity: 0;
-    transform: translateY(-10px);
+#bookseeker:hover .bs {
+  opacity: 0;
+  transform: translateY(-10px);
 }
-#bookseeker:hover .full{
-    opacity: 1;
-    transform: translateY(0);
+#bookseeker:hover .full {
+  opacity: 1;
+  transform: translateY(0);
 }
-#bookseeker .bs, .full{
-    font-size: 10vmin;
-    background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 1px );
--webkit-backdrop-filter: blur( 1px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+#bookseeker .bs,
+.full {
+  font-size: 10vmin;
+  /* background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
-
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-#one{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
+#one {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-#arrow{
-    width: 30vmin;
-    position: absolute;
-    left: 27vh;
-    bottom: 28vh;
+#arrow {
+  width: 30vmin;
+  position: absolute;
+  left: 27vh;
+  bottom: 28vh;
 }
-#arrowLeft{
-    width: 30vmin;
-    position: absolute;
-    z-index: -1;
-    display: none;
-    transform: rotate(131deg);
-    top: 65vh;
-    left: 17vh;
+#arrowLeft {
+  width: 30vmin;
+  position: absolute;
+  z-index: -1;
+  display: none;
+  transform: rotate(131deg);
+  top: 65vh;
+  left: 17vh;
 }
-#hitbox{
-    width: 27vmin;
-    height: 74vmin;
-    position: absolute;
-    right: 0;
-    border: 10px solid white;
-    top: 27vh;
+#hitbox {
+  width: 27vmin;
+  height: 74vmin;
+  position: absolute;
+  right: 0;
+  /* border: 10px solid white; */
+  top: 27vh;
 }
-#hitbox2{
-    width: 27vmin;
-    height: 37vmin;
-    position: absolute;
-    right: 13vh;
-    border: 10px solid white;
-    top: 41vh;
+#hitbox2 {
+  width: 27vmin;
+  height: 37vmin;
+  position: absolute;
+  right: 13vh;
+  border: 10px solid white;
+  top: 41vh;
 }
-#libraryH3{
-    font-size: 4vh;
-    position: absolute;
-    left: 37vh;
-    top: 23vh;
+#libraryH3 {
+  font-size: 4vh;
+  position: absolute;
+  right: 4vw;
+  top: 42vh;
+  background: rgba(0, 230, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 41vmin;
+  text-align: center;
+  cursor: pointer;
 }
-#libraryH3In{
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    width: 100vw;
-    text-align: center;
-    height: 10vmin;
-    display: none;
+#libraryH3In {
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 100vw;
+  text-align: center;
+  height: 10vmin;
+  display: none;
 }
 /* .ar img{
     width: 100%;
@@ -120,4 +128,26 @@ body{
     z-index: -1;
     top: -5vh;
 } */
-
+#tutorial {
+  position: absolute;
+  font-size: 10vmin;
+  right: 10vw;
+  /* background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); */
+  width: 10vmin;
+  text-align: center;
+}
+#tutorial, #bookseeker .bs,
+.full {
+background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
