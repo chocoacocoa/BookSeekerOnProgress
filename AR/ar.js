@@ -36,5 +36,5 @@ function hitbox() {
 }
 
 function tutorial(){
-    alert('wag ka na magtanong kung pano\npindutin mo lang yan parang summertime saga');
+    alert('Click the location you want to enter or to go.');
 }

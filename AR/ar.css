@@ -129,6 +129,7 @@ body {
     top: -5vh;
 } */
 #tutorial {
+    display: flex;
   position: absolute;
   font-size: 10vmin;
   right: 10vw;
@@ -138,7 +139,7 @@ body {
   -webkit-backdrop-filter: blur(1px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18); */
-  width: 10vmin;
+  width: fit-content;
   text-align: center;
 }
 #tutorial, #bookseeker .bs,
@@ -150,4 +151,13 @@ background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
+}
+#tutorialBody{
+    
+}
+#tutorial:hover #hint{
+    display: block;
+}
+#hint{
+    display:none;
 }
