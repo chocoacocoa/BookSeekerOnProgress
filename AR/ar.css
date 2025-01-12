@@ -71,6 +71,7 @@ body {
   position: absolute;
   left: 27vh;
   bottom: 28vh;
+  display: none;
 }
 #arrowLeft {
   width: 30vmin;
@@ -141,6 +142,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18); */
   width: fit-content;
   text-align: center;
+  transition: 0.2s;
 }
 #tutorial, #bookseeker .bs,
 .full {
@@ -151,13 +153,4 @@ background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
-}
-#tutorialBody{
-    
-}
-#tutorial:hover #hint{
-    display: block;
-}
-#hint{
-    display:none;
 }

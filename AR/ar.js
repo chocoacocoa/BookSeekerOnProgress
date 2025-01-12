@@ -35,6 +35,21 @@ function hitbox() {
     arrow.style.transform = 'rotate(-52deg)';
 }
 
+function tutorialCursorIn(){
+    tutorialMark.innerHTML = "hint";
+}
+function tutorialCursorOut(){
+    tutorialMark.innerHTML = "?";
+}
 function tutorial(){
-    alert('Click the location you want to enter or to go.');
+    if(arrow.style.display === 'none'){
+        arrow.style.display = 'block';
+    }else{
+        arrow.style.display = 'none';
+    }
+    if(arrow.style.display === 'block'){
+        //di pa fixed di ko ma gets pa
+        tutorialMark.innerHTML = "hide hints";
+    }
+    alert('Click the parts of the map you wanna enter or explore.\nLook at the arrow keys to see the areas you can access.');
 }
