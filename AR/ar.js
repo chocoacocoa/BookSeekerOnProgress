@@ -5,6 +5,7 @@ let libraryh3 = document.getElementById('libraryH3');
 let libraryH3In = document.getElementById('libraryH3In');
 let arrowLeft = document.getElementById('arrowLeft');
 let tutorialMark = document.getElementById('tutorial');
+let arrow1 = document.getElementById('shelf1Arrow');
 // function hitbox(){
 //     image.src = '/AR/arMedias/POVs/vertical/2.jpg';
 //     // arrow.style.display = 'none';
@@ -44,8 +45,11 @@ function tutorialCursorOut(){
 function tutorial(){
     if(arrow.style.display === 'none'){
         arrow.style.display = 'block';
+        arrow1.style.display = 'block';
+
     }else{
         arrow.style.display = 'none';
+        arrow1.style.display = 'none';
     }
 
 }
