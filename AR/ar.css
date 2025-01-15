@@ -17,7 +17,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin: 10%;
-  color: white;
+  color: black;
 
   /* glassmorphism */
 }
@@ -73,6 +73,14 @@ body {
   bottom: 28vh;
   display: none;
 }
+#shelf1Arrow {
+  width: 16vmin;
+  position: absolute;
+  left: 12vh;
+  bottom: 74vh;
+  display: none;
+  transform: rotate(89deg);
+}
 #arrowLeft {
   width: 30vmin;
   position: absolute;
@@ -112,6 +120,7 @@ body {
   width: 41vmin;
   text-align: center;
   cursor: pointer;
+  color: black;
 }
 #libraryH3In {
   position: absolute;
@@ -143,6 +152,7 @@ body {
   width: fit-content;
   text-align: center;
   transition: 0.2s;
+  color: black;
 }
 #tutorial, #bookseeker .bs,
 .full {
@@ -153,4 +163,11 @@ background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
+}
+#back{
+  width: 15vmin;
+  position: absolute;
+  right: 5vw;
+  bottom: 76vh;
+  filter: invert(0);
 }

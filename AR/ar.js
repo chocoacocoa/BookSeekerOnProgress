@@ -47,9 +47,5 @@ function tutorial(){
     }else{
         arrow.style.display = 'none';
     }
-    if(arrow.style.display === 'block'){
-        //di pa fixed di ko ma gets pa
-        tutorialMark.innerHTML = "hide hints";
-    }
-    alert('Click the parts of the map you wanna enter or explore.\nLook at the arrow keys to see the areas you can access.');
+
 }
