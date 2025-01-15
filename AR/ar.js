@@ -51,5 +51,9 @@ function tutorial(){
         arrow.style.display = 'none';
         arrow1.style.display = 'none';
     }
-
+function exceptionals(){
+    if (image.src.endsWith('/AR/arMedias/POVs/vertical/1.jpg')){
+        arrow1.style.display = 'none';
+    }
+}
 }
