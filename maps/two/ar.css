@@ -153,7 +153,7 @@ body {
   position: absolute;
   right: 5vw;
   bottom: 76vh;
-  filter: invert(0);
+  filter: invert(1);
 }
 #shelf1and2{
   font-size: 4vh;
@@ -169,14 +169,14 @@ body {
   width: fit-content;
   text-align: center;
   cursor: pointer;
-  color: black;
+  color: white;
   padding-inline: 15px;
   font-size: 7vmin;
 }
-#shelf2and3{
+#shelf2and3, #shelf4and5, #shelf6{
   position: absolute;
   right: 24vw;
-  top: 34vh;
+  top: 39vh;
   background: rgba(0, 230, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -190,20 +190,14 @@ body {
   padding-inline: 15px;
   font-size: 6vmin;
 }
-#shelf2and3{
-  position: absolute;
-  right: 24vw;
-  top: 34vh;
-  background: rgba(0, 230, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: fit-content;
-  text-align: center;
-  cursor: pointer;
-  color: white;
-  padding-inline: 15px;
-  font-size: 6vmin;
+#shelf4and5{
+  top: 24vh;
+  z-index: -1;
+  left: 58vw;
+  font-size: 5vmin;
+}
+#shelf6{
+  top: 26vh;
+  left: 45vh;
+  font-size: 5vmin;
 }
