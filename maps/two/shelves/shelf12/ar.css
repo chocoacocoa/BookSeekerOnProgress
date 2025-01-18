@@ -115,7 +115,6 @@ body {
   text-align: center;
   height: 10vmin;
   display: block;
-  font-size: 7vmin;
 }
 /* .ar img{
     width: 100%;
@@ -125,7 +124,7 @@ body {
     top: -5vh;
 } */
 #tutorial {
-  display: flex;
+    display: flex;
   position: absolute;
   font-size: 10vmin;
   right: 10vw;
@@ -140,25 +139,23 @@ body {
   transition: 0.2s;
   color: black;
 }
-#tutorial,
-#bookseeker .bs,
-.full, #randombooks, #brownbook, #redbook, #bookshelf2, #bookshelf1{
-  background: rgba(0, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+#tutorial, #bookseeker .bs,
+.full {
+  background: rgba( 0, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  cursor: pointer;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-#back {
+#back{
   width: 15vmin;
   position: absolute;
   right: 5vw;
   bottom: 76vh;
   filter: invert(1);
 }
-#shelf1and2 {
+#shelf1and2{
   font-size: 4vh;
   position: absolute;
   right: 52vw;
@@ -176,9 +173,7 @@ body {
   padding-inline: 15px;
   font-size: 7vmin;
 }
-#shelf2and3,
-#shelf4and5,
-#shelf6 {
+#shelf2and3, #shelf4and5, #shelf6{
   position: absolute;
   right: 24vw;
   top: 39vh;
@@ -195,87 +190,14 @@ body {
   padding-inline: 15px;
   font-size: 6vmin;
 }
-#shelf4and5 {
+#shelf4and5{
   top: 24vh;
   z-index: -1;
-  left: 51vw;
+  left: 58vw;
   font-size: 5vmin;
 }
-#shelf6 {
-  top: 33vh;
-  left: 78vw;
+#shelf6{
+  top: 26vh;
+  left: 45vh;
   font-size: 5vmin;
-}
-#tutorialMat {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50vh;
-}
-#tutorialdiv {
-  background: rgba(30, 181, 121, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  text-align: center;
-  width: 82vmin;
-  height: 24vh;
-  align-items: center;
-  padding: 8vmin;
-  font-size: 4vmin;
-  position: absolute;
-  top: -16vh;
-  left: 10vw;
-}
-#tutorialdiv h3 {
-  background: rgba(255, 0, 2, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  width: 4em;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-#tutorialMat,
-#tutorialdiv {
-  display: none;
-  z-index: 99;
-}
-#randombooks, #brownbook, #redbook, #bookshelf2, #bookshelf1{
-  display: none;
-  text-align: center;
-  width: fit-content;
-  padding: 10px;
-  position: absolute;
-}
-#brownbook, #redbook{
-  background: rgba( 107, 0, 1, 0.4 );
-  left: 32vw;
-  top: 31vh;
-}
-#redbook{
-  background: rgba( 255, 0, 2, 0.4 );
-  left: 3vw;
-  top: 45vh;
-  width: 42vmin;
-}
-#bookshelf1, #bookshelf2{
-  top: 85vh;
-  left: 3vw;
-  width: 43vmin;
-}
-#bookshelf2{
-  left: 55vw;
-}
-#randombooks{
-  left: 59vw;
-  top: 55vh;
 }
