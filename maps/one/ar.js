@@ -58,3 +58,4 @@ function tutorialOnClick() {
     arrow.style.display = 'none';
   }
 }
+

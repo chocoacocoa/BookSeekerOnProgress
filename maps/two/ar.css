@@ -116,6 +116,7 @@ body {
   height: 10vmin;
   display: block;
   font-size: 7vmin;
+  color: white;
 }
 /* .ar img{
     width: 100%;
@@ -151,7 +152,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   cursor: pointer;
 }
-#back {
+#back, #backLibrary {
   width: 15vmin;
   position: absolute;
   right: 5vw;

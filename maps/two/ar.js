@@ -18,22 +18,23 @@ let redbook = document.getElementById("redbook");
 let randombooks = document.getElementById("randombooks");
 let bookshelf1 = document.getElementById("bookshelf1");
 let bookshelf2 = document.getElementById("bookshelf2");
+let backLibrary = document.getElementById("backLibrary");
+let isbacklibraryrunning = false;
+
 function tutorialOnClick(){
-    // if (arrow.style.display === 'none'){
-    //     arrow.style.display = 'block';
-    //     arrow1.style.display = 'block';
-    //     alert("Click the buttons to go to the selected shelves.\nTo hide the arrows, click '?' again.");
-    // }else {
-    //     arrow.style.display = 'none';
-    //     arrow1.style.display = 'none';
-    // }
     tutorialMat.style.display = 'block';
     tutorialdiv.style.display = 'block';
 }
-function backOnclick(){
 
+backLibrary.onclick = function () {
+    if (isbacklibraryrunning){
+        shelf1to2();
+    }else{
+        alert("backbutton is disabled boss");
+    }
 }
-function shelfOneATwoOnClick(){
+
+function shelf1to2(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf1 and 2 clicked.");
     image.src = '/AR/arMedias/POVs/vertical/3.1.jpg';
@@ -50,8 +51,85 @@ function shelfOneATwoOnClick(){
     redbook.style.display = 'block';
     brownbook.style.display = 'block';
     randombooks.style.display = 'block';
+    backLibrary.style.display = 'none';
+    back.style.display = 'block';
+    isbacklibraryrunning = false;
+    brownbook.style.left = '28vw';
+    brownbook.style.top = '34vh';
+    randombooks.style.left = '59vw';
+    randombooks.style.top = '55vh';
+    randombooks.style.width = 'fit-content';
+    randombooks.style.borderRadius = '10px';
 }
+function bookshelf11(){
+    image.src = "/AR/arMedias/POVs/vertical/3.1.1.jpg";
+    bookshelf1.style.display = 'block';
+    bookshelf2.style.display = 'block';
+    redbook.style.display = 'block';
+    brownbook.style.display = 'block';
+    randombooks.style.display = 'none';
+    brownbook.style.top = "69vh";
+    brownbook.style.left = "66vw";
+    libraryH3In.innerHTML = "Library > bookshelf 1";
+    back.style.display = "none";
+    isbacklibraryrunning = true;
+    backLibrary.style.display = 'block';
+}
+
 function X(){
     tutorialMat.style.display = 'none';
     tutorialdiv.style.display = 'none';
+}
+function shelf2to3(){
+    shelf1and2.style.fontSize = '6vmin';
+    console.log("shelf2 and 3 clicked.");
+    image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
+    backHref.href = "/maps/two/ar.html";
+    shelf6.style.display = 'none';
+    shelf4and5.style.display = 'none';
+    shelf2and3.style.display = 'none';
+    shelf1and2.style.display = 'none';
+    libraryH3In.innerHTML = 'Library > Shelf 1-2';
+    back.style.filter = "invert(1)";
+    bookshelf1.style.display = 'block';
+    bookshelf2.style.display = 'block';
+    redbook.style.display = 'block';
+    brownbook.style.display = 'block';
+    randombooks.style.display = 'block';
+    
+}
+function shelf4to5onclick(){
+    shelf1and2.style.fontSize = '6vmin';
+    console.log("shelf2 and 3 clicked.");
+    image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
+    backHref.href = "/maps/two/ar.html";
+    shelf6.style.display = 'none';
+    shelf4and5.style.display = 'none';
+    shelf2and3.style.display = 'none';
+    shelf1and2.style.display = 'none';
+    libraryH3In.innerHTML = 'Library > Shelf 1-2';
+    back.style.filter = "invert(1)";
+
+    bookshelf1.style.display = 'block';
+    bookshelf2.style.display = 'block';
+    redbook.style.display = 'block';
+    brownbook.style.display = 'block';
+    randombooks.style.display = 'block';
+}
+
+function bookshelf22(){
+    image.src = '/maps/two/arMedias/POVs/vertical/3.1.2.jpg';
+    redbook.style.display = 'none';
+    brownbook.style.display = 'none';
+    isbacklibraryrunning = true;
+    backLibrary.style.display = 'block';
+    back.style.display = 'none';
+    libraryH3In.innerHTML = 'Library > Shelf 2';
+    randombooks.style.left = 'unset';
+    randombooks.style.top = '77vh';
+    randombooks.style.width = '100vw';
+    randombooks.style.borderRadius = 'unset';
+    randombooks.style.display = 'block';
+    
+
 }
