@@ -33,7 +33,7 @@ backLibrary.onclick = function () {
         alert("backbutton is disabled boss");
     }
 }
-
+backLibrary.style.display = 'none';
 function shelf1to2(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf1 and 2 clicked.");

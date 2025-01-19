@@ -17,7 +17,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin: 10%;
-  color: black;
+  color: white;
 
   /* glassmorphism */
 }
@@ -139,7 +139,7 @@ body {
   width: fit-content;
   text-align: center;
   transition: 0.2s;
-  color: black;
+  color: white;
 }
 #tutorial,
 #bookseeker .bs,

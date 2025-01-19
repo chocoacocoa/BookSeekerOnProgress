@@ -389,6 +389,7 @@ label #btn {
     background: linear-gradient(90deg, #55e7fc);
     border-radius: 3px;
     cursor: pointer;
+
 }
 label #cancel{
     position: fixed;
@@ -397,8 +398,8 @@ label #cancel{
     cursor: pointer;
 }
 label #btn {
-    left: 40px;
-    top: 39px;
+        left: 38px;
+    top: 4vh;
     font-size: 31px;
     color: white;
     padding: 6px 12px;
