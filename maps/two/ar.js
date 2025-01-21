@@ -184,7 +184,7 @@ function bookshelf11(){
     bookshelf2.style.opacity = '0.5';
 }
 function bookshelf22(){
-    image.src = '/maps/two/arMedias/POVs/vertical/3.1.2.jpg';
+    image.src = '/AR/arMedias/POVs/vertical/3.1.2.jpg';
     redbook.style.display = 'none';
     brownbook.style.display = 'none';
     isbacklibraryrunning = true;
@@ -203,7 +203,7 @@ function bookshelf22(){
     }
 }
 function bookshelf1inshelf23(){
-    image.src = '/maps/two/arMedias/POVs/vertical/bookshelf2.jpg';
+    image.src = '/AR/arMedias/POVs/vertical/phmap.jpg';
     redbook.style.display = 'none';
     brownbook.style.display = 'none';
     isbacklibraryrunning = false;
@@ -228,13 +228,13 @@ function bookshelf1inshelf23(){
 function shelf4to5(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf2 and 3 clicked.");
-    image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
+    image.src = '/AR/arMedias/POVs/vertical/5.jpg';
     backHref.href = "/maps/two/ar.html";
     shelf6.style.display = 'none';
     shelf4and5.style.display = 'none';
     shelf2and3.style.display = 'none';
     shelf1and2.style.display = 'none';
-    libraryH3In.innerHTML = 'Library > Shelf 3';
+    libraryH3In.innerHTML = 'Library > Shelf 4-5';
     back.style.filter = "invert(1)";
     bookshelf1.style.display = 'block';
     bookshelf2.style.display = 'block';
@@ -246,18 +246,82 @@ function shelf4to5(){
     randombooks.style.borderRadius = 'unset';
     randombooks.style.display = 'block';
     randombooks.innerHTML = 'random books';
-    
-    // isshelf2to3running = true;
     isbacklibraryrunning = false;
-   
     backLibrary.style.display = 'none';
     bookshelf2.style.opacity = '1.0';
-    bookshelf1.style.opacity = '0.5';
-    
+    bookshelf1.style.opacity = '1.0';
+    backLibrary.style.display = 'none';
+    backLibrary.onclick = function(){
+        shelf4to5();
+    }
     bookshelf1.onclick = function (){
-        bookshelf1inshelf23();
+        image.src = "/AR/arMedias/POVs/vertical/5.1.jpg";
+        bookshelf2.style.opacity = '0.5';
+    bookshelf1.style.opacity = '1.0';
+    backLibrary.style.display = 'block';
+    libraryH3In.innerHTML = 'Library > Shelf 4';
     }
     bookshelf2.onclick = function () {
-        shelf2to3();
+        image.src = "/AR/arMedias/POVs/vertical/5.2.jpg";
+        bookshelf2.style.opacity = '1.0';
+    bookshelf1.style.opacity = '0.5';
+    backLibrary.style.display = 'block';
+    libraryH3In.innerHTML = 'Library > Shelf 5';
+    }
+}
+function shelf6click(){
+    shelf1and2.style.fontSize = '6vmin';
+    console.log("shelf2 and 3 clicked.");
+    image.src = '/AR/arMedias/POVs/vertical/6.jpg';
+    backHref.href = "/maps/two/ar.html";
+    shelf6.style.display = 'none';
+    shelf4and5.style.display = 'none';
+    shelf2and3.style.display = 'none';
+    shelf1and2.style.display = 'none';
+    libraryH3In.innerHTML = 'Library > Shelf 4-5';
+    back.style.filter = "invert(1)";
+    bookshelf1.style.display = 'none';
+    bookshelf2.style.display = 'none';
+    redbook.style.display = 'block';
+    redbook.style.left = '31vw';
+    redbook.style.top = '62vh';
+    
+    brownbook.style.display = 'none';
+    randombooks.style.left = 'unset';
+    randombooks.style.top = '77vh';
+    randombooks.style.width = '100vw';
+    randombooks.style.borderRadius = 'unset';
+    randombooks.style.display = 'none';
+    randombooks.innerHTML = 'random books';
+    isbacklibraryrunning = false;
+    backLibrary.style.display = 'none';
+    bookshelf2.style.opacity = '1.0';
+    bookshelf1.style.opacity = '1.0';
+    backLibrary.style.display = 'none';
+    backLibrary.onclick = function(){
+        shelf6();
+    }
+    bookshelf1.onclick = function (){
+        image.src = "/AR/arMedias/POVs/vertical/5.1.jpg";
+        bookshelf2.style.opacity = '0.5';
+    bookshelf1.style.opacity = '1.0';
+    backLibrary.style.display = 'block';
+    libraryH3In.innerHTML = 'Library > Shelf 4';
+    }
+    bookshelf2.onclick = function () {
+        image.src = "/AR/arMedias/POVs/vertical/5.2.jpg";
+        bookshelf2.style.opacity = '1.0';
+    bookshelf1.style.opacity = '0.5';
+    backLibrary.style.display = 'block';
+    libraryH3In.innerHTML = 'Library > Shelf 5';
+    }
+    redbook.onclick = function (){
+        image.src = "/AR/arMedias/POVs/vertical/6.2.jpg";
+        redbook.style.display = 'none';
+        back.style.display = 'block';
+        backLibrary.style.display = 'block';
+        backLibrary.onclick = function(){
+            shelf6click();
+        }
     }
 }
