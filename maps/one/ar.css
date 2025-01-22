@@ -111,7 +111,7 @@ body {
   position: absolute;
   right: 4vw;
   top: 42vh;
-  background: rgba(0, 230, 255, 0.25);
+  background: rgba(0, 0, 0, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -120,7 +120,7 @@ body {
   width: 41vmin;
   text-align: center;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 #libraryH3In {
   position: absolute;
@@ -152,17 +152,19 @@ body {
   width: fit-content;
   text-align: center;
   transition: 0.2s;
-  color: black;
+  color: white;
+  display: none;
 }
 #tutorial, #bookseeker .bs,
 .full {
-  background: rgba( 0, 255, 255, 0.25 );
+  background: rgba( 0, 0, 0, 0.45 );
   animation: ani 10s infinite alternate ease-in-out;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: white;
 }
 #back{
   width: 15vmin;
