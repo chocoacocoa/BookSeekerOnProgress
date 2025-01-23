@@ -1,210 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">  
+<!doctype html>
+<html lang="en" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Balingasa High School Indoor Navigation App</title>
 </head>
+<style>
+	#bookseeker{
+		font-size: 10vmin;
+		
+	}
+	#subtitle{
+			color: white;
+		}
+	#magpatuloy{
+		background: rgba( 187, 33, 33, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12.5px );
+-webkit-backdrop-filter: blur( 12.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+	}
+	#background{
+		background-image: url("/medias/introbackground.gif");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+</style>
+
 <body>
+	<section class="cd-intro">
+		<div class="cd-intro-content mask-2" id="background">
+			<div class="content-wrapper">
+				<div>
+					<h1 id="bookseeker">BOOKSEEKER</h1>
+					<p id="subtitle">Balingasa High School Indoor Navigation App</p>
+					<div class="action-wrapper">
+						<a href="index1.html" class="cd-btn main-action" id="magpatuloy">Continue</a>
+						<!-- <a href="#0" class="cd-btn">Learn More</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!-- Sidebar -->
-<input type="checkbox" id="check">
-<label for="check">
-    <i class="fas fa-bars" id="btn"></i>
-    <i class="fas fa-times" id="cancel"></i>
-    <img src="medias/1bhslogo.png">
-</label>
-<div class="sidebar"> 
-    <header>Menu</header>
-    <ol class="ulSidebar">
-        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="/maps/one/ar.html"><i class="fas fa-book"></i>Library</a></li>
-        <li><a href="AboutUs.html"><i class="fas fa-info"></i>About</a></li>
-        <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
-    </ol>
-</div>
-
-<header>
-    <h1>BookSeeker</h1>
-   
-</header>
-<div class="div1">
-    <input class="input" title="Input the name of the book you're looking for." 
-           placeholder="Search here" id="name" onkeyup="filterItems()">
-    <h2 style="color: white; font-family: 'Product sans';">Seek your book</h2>
-</div>
-
-<ol id="itemList">
-
-
-
-    <li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-        Assessment & Guide Books
-        <div class="info">
-      
-            <a href="filipinomap.html"><h4 class="mapguide">Assessment Package: Grade 10</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide">Global Citizens Assemble! (Instructor’s Guide)</h4></a>
-    
-        </div>
-    </li>
-    </li>
-    <li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-       Dictionary & Encyclopedia
-        <div class="info">
-      
-            <a href="filipinomap.html"><h4 class="mapguide">Britanica Junior Encyclopidia</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide">Collier's Encyclopedia </h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide">Diksyunaryo ng Wikang Filipino</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide">Encyclopaedia Britanica</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide">Encyclopedia International</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide"> Lexicon Universal Encyclopedia</h4></a>
-            <a href="filipinomap.html"><h4 class="mapguide"> The National Encyclopideia</h4></a>
-        </div>
-    </li>
-    </li>
-
-
-
-
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    English Books
-    <div class="info">
-        <a href="filipinomap.html"><h3 class="mapguide">Adventures in Appreciation</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">English Grade 7</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">HBJ Language</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">HUGHTON MIFFLIN: English</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">The Language of Literature </h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Writer's Choice Grammar and Composition</h3></a>
-
-    </div>
-</li>
-</li>
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    Entrepreneurship
-    <div class="info">
-      
-        <a href="filipinomap.html"><h3 class="mapguide"> Philip Kolter: Principles of Marketing </h3></a>
-    </div>
-</li>
-</li>
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    Filipino Books
-    <div class="info">
-  
-        <a href="filipinomap.html"><h4 class="mapguide">Batayang Aklat sa Edukasyon sa Pagpapkatao</h4></a>
-        <a href="filipinomap.html"><h4 class="mapguide">Batayang Aklat sa Panlipunan</h4></a>
-        <a href="filipinomap.html"><h4 class="mapguide">Grade 9: PAGPAPAKATAO (Edukasyon sa Pagpapakatao)</h4></a>
-        <a href="filipinomap.html"><h4 class="mapguide">Grade 9: PAG-UNLAD (Araling Panlipunan)</h4></a>
-        <a href="filipinomap.html"><h4 class="mapguide">TUDLA 7: Mga Modyul sa Filipino Panitikang Rehiyonal</h4></a>
-
-    </div>
-</li>
-</li>
-
-
-
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    Healthcare textbooks
-    <div class="info">
-        <a href="filipinomap.html"><h3 class="mapguide">Refference Materials on HIV, AIDS & STI for High School Students</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Health for Life</h3></a>
-    </div>
-</li>
-</li>
-
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    History Books
-    <div class="info">
-        <a href="filipinomap.html"><h3 class="mapguide">Collier's Year Book</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">MAGSAYSAY: The People’s President</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Quezon City Council History and Legacy</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Quezon City (Manuel D. Duldulao)</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Quezon City Turns</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">The Harvard Classic</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">World Book</h3></a>
-    </div>
-</li>
-</li>
-
-
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    Mathematics
-    <div class="info">
-        
-        <a href="filipinomap.html"><h3 class="mapguide">Skills Book in Mathematics</h3></a>
-       
-    </div>
-</li>
-</li>
-
-
-
-
-
-
-<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
-    Science Books
-    <div class="info">
-      
-        <a href="filipinomap.html"><h3 class="mapguide">Addison-Wesley: Chemistry (Second Edition)</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Campbell Biology</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Encyclopedia of Nature and Science</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Mark Robert Waldman & Chris Manning Phd: NeuroWisdom</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">The Science Library: IV Our Earth, Oceanography, Weather</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Mysteries of Mind Space & Time: The Unexplained </h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">Physical Science</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">The Book of  Popular Science</h3></a>
-        <a href="filipinomap.html"><h3 class="mapguide">The Science Library: IV Our Earth, Oceanography, Weather</h3></a>
-    </div>
-</li>
-</li>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    function filterItems() {
-        const input = document.getElementById('name');
-        const filter = input.value.toLowerCase();
-        const items = document.querySelectorAll('#itemList li');
-
-        items.forEach(function(item) {
-            const links = item.querySelectorAll('.info a');
-            let categoryMatch = false;
-            let bookMatch = false;
-
-            links.forEach(function(link) {
-                const text = link.textContent || link.innerText;
-                if (text.toLowerCase().includes(filter)) {
-                    link.style.display = ""; // Show matching book
-                    bookMatch = true;
-                } else {
-                    link.style.display = "none"; // Hide non-matching book
-                }
-            });
-
-            if (bookMatch) {
-                categoryMatch = true;
-                item.style.display = ""; // Show the category if any book matches
-            } else {
-                item.style.display = "none"; // Hide the category if no books match
-            }
-        });
-    }
-
-    function toggleInfo(item) {
-        const info = item.querySelector('.info');
-        info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
-    }
-</script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
+
 </html>
