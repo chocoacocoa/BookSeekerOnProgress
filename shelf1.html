@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center ;
     margin: 5vmin;
+    
  
 }
 @media only screen and (max-width: 600px){
@@ -22,14 +23,24 @@
     }
 }
 .content{       
-    box-shadow: 0 0 100px red;
+   
     img{
         width: 86vmin;
     }
 
+
 }
-body{
-background-color: bisque;
+.backimg{
+    filter: invert(1);
+    height: auto;
+    width: 50px;
+    position: absolute;
+    margin-top: -71px;
+    margin-left: 75px;
+    cursor: pointer;
+    left: -38px;
+    z-index: 100;    /* ensures it stays on top */
+  
 }
 
 </style>
@@ -47,7 +58,7 @@ background-color: bisque;
     <div class="sidebar"> 
         <header>Menu</header>
         <ol class="ulSidebar">
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="index1.html"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="/maps/one/ar.html"><i class="fas fa-book"></i>Library</a></li>
             <li><a href="AboutUs.html"><i class="fas fa-info"></i>About</a></li>
             <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
@@ -60,11 +71,15 @@ background-color: bisque;
     </header>
     
     <div class="paper">
-        <a href="index.html" class="back1"  alt="Back Button"><img src="medias/back.png"> </a>
+        <a href="index.html" class="back1 "  alt="Back Button"><img src="medias/back.png" class="backimg" >
     <span class="content"> <img src="medias/map1.PNG"> </span> 
+    </div>
+
 
 
     </div>
+
+
 
 </body>
 
