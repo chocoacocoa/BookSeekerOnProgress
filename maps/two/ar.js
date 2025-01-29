@@ -324,4 +324,11 @@ function shelf6click(){
             shelf6click();
         }
     }
+    function hrefToHome() {
+        if (confirm("Continue to homepage?")) {
+            window.location.href = "/index1.html";
+        } else {
+            return;
+        }
+    }
 }
