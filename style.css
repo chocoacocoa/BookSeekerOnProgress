@@ -374,16 +374,19 @@ label #btn {
   background: linear-gradient(90deg, #55e7fc);
   border-radius: 3px;
   cursor: pointer;
+  top: 2.8vh;
+  width: 10vmin;
+  left: 5vw;
 }
 label #cancel {
   position: fixed;
   background: 700808;
   border-radius: 3px;
   cursor: pointer;
+  
 }
 label #btn {
-  left: 38px;
-  top: 4vh;
+  
   font-size: 31px;
   color: white;
   padding: 6px 12px;
@@ -413,10 +416,14 @@ label img {
   pointer-events: none;
 }
 #check:checked ~ label #cancel {
-  left: 195px;
+  left: 187px;
+  top: 3vh;
 }
 #check:checked ~ section {
   margin-left: 250px;
+}
+label #cancel{
+  width: 11vmin;
 }
 /*INFO IMAGES sdfgsfdg*/
 
@@ -450,7 +457,6 @@ label img {
 }
 @media only screen and (max-width: 412px) {
   label #btn {
-    top: 3vh;
     font-size: 8vmin;
   }
 }

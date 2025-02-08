@@ -1,78 +1,236 @@
-<!doctype html>
-<html lang="en" class="no-js">
-
+<!DOCTYPE html>
+<html lang="en">  
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,400' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-
-	<title>Balingasa High School Indoor Navigation App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<style>
-	*{
-		transition: 0.10s;
-		font-family: "Product Sans";
-	}
-	#bookseeker{
-		font-size: 10vmin;
-		font-weight: bold;
-	}
-	#subtitle{
-			color: white;
-			
-		}
-	#magpatuloy{
-		background: rgba( 187, 33, 33, 0.2 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 12.5px );
--webkit-backdrop-filter: blur( 12.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-	}
-	#background{
-		background-image: url("/medias/introbackground.gif");
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	#blurBackground{
-		background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 3.5px );
--webkit-backdrop-filter: blur( 3.5px );
-
-width: 100%;
-height: 100%;
-position: absolute;
-z-index: 1;
-	}
-</style>
-
 <body>
-	<div id="blurBackground">
-		
-	</div>
-	<section class="cd-intro">
-		<div class="cd-intro-content mask-2" id="background">
-			<div class="content-wrapper">
-				<div>
-					<h1 id="bookseeker">BOOKSEEKER</h1>
-					<p id="subtitle">Balingasa High School Indoor Navigation App</p>
-					<div class="action-wrapper">
-						<a href="index1.html" class="cd-btn main-action" id="magpatuloy">Continue</a>
-						<!-- <a href="#0" class="cd-btn">Learn More</a> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<script src="js/jquery-2.1.4.js"></script>
-	<script src="js/main.js"></script> <!-- Resource jQuery -->
+<!-- Sidebar -->
+ <!-- reminder -->
+  <div id="reminderfatherdiv">
+    
+    <div id="remindermotherdiv">
+        <p id="xreminder" onclick="reminder()">x</p>
+        <div id="reminderdiv">
+            <p>
+                This project is still under development.
+            We will take your criticisms and advice with gratitude.
+            <br><br>Thank you.
+            </p>
+        </div>
+      </div>
+  </div>
+  
+  
+  <!-- reminder's end -->
+  <input type="checkbox" id="check">
+  <label for="check">
+      <i><img src="sidebarRemovedBg.png" id="btn"/></i>
+      <i><img src="xRemovedBg.png" id="cancel"/></i>
+      <img src="1bhslogo.png">
+  </label>
+  <div class="sidebar"> 
+      <header>Menu</header>
+      <ol class="ulSidebar">
+          <li><a href="index.html"><i></i>Home</a></li>
+          <li><a href="ar.html"><i></i>Library</a></li>
+          <li><a href="AboutUs.html"><i></i>About</a></li>
+          <!-- <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li> -->
+      </ol>
+  </div>
+
+<header>
+    <h1>BookSeeker</h1>
+   
+</header>
+<div class="div1">
+    <input class="input" title="Input the name of the book you're looking for." 
+           placeholder="Search here" id="name" onkeyup="filterItems()">
+    <h2 style="color: white; font-family: 'Product sans';">Seek your book</h2>
+</div>
+
+<ol id="itemList">
+
+
+
+    <li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+        Assessment & Guide Books
+        <div class="info">
+      
+            <a href="shelf5.html"><h4 class="mapguide">3As: Awake, Alert, Alive</h4></a>
+            <a href="shelf5.html"><h4 class="mapguide">Bata Bantayan</h4></a>
+    
+        </div>
+    </li>
+    </li>
+    <li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+       Dictionary & Encyclopedia
+        <div class="info">
+      
+            <a href="shelf4.html"><h4 class="mapguide">Britanica Junior Encyclopidia</h4></a>
+            <a href="shelf5.html"><h4 class="mapguide">Collier's Encyclopedia </h4></a>
+            <a href="shelf4.html"><h4 class="mapguide">Diksyunaryo ng Wikang Filipino</h4></a>
+            <a href="shelf4.html"><h4 class="mapguide">Encyclopaedia Americana</h4></a>
+            <a href="shelf4.html"><h4 class="mapguide">Encyclopaedia Britanica</h4></a>
+            <a href="shelf4.html"><h4 class="mapguide">Encyclopedia International</h4></a>
+            <a href="shelve3.html"><h3 class="mapguide">Encyclopedia of Nature and Science</h3></a>
+            <a href="shelf4.html"><h4 class="mapguide"> Lexicon Universal Encyclopedia</h4></a>
+            <a href="shelf4.html"><h4 class="mapguide"> The National Encyclopideia</h4></a>
+        </div>
+    </li>
+    </li>
+
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    English Books
+    <div class="info">
+        <a href="shelf3.html"><h3 class="mapguide">Adventures in Appreciation</h3></a>
+        <a href="shelf2.html"><h3 class="mapguide">English Grade 7</h3></a>
+        <a href="shelf3.html"><h3 class="mapguide">HBJ Language</h3></a>
+        <a href="shelf2.html"><h3 class="mapguide">The Language of Literature </h3></a>
+        <a href="shelf2.html"><h3 class="mapguide">Writer's Choice Grammar and Composition</h3></a>
+
+    </div>
+</li>
+</li>
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Filipino Books
+    <div class="info">
+  
+        
+        <a href="shelf1.html"><h4 class="mapguide">Grade 9: PAGPAPAKATAO (Edukasyon sa Pagpapakatao)</h4></a>
+        <a href="shelf1.html"><h4 class="mapguide">Grade 9: PAG-UNLAD (Araling Panlipunan)</h4></a>
+        <a href="shelf1.html"><h4 class="mapguide">TUDLA 8: Mga Modyul sa Filipino Panitikang Rehiyonal</h4></a>
+
+    </div>
+</li>
+</li>
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Healthcare textbooks
+    <div class="info">
+       
+        <a href="shelf3.html"><h3 class="mapguide">Health for Life</h3></a>
+    </div>
+</li>
+</li>
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    History Books
+    <div class="info">
+        
+        
+        <a href="shelf3.html"><h3 class="mapguide">Quezon City Council History and Legacy</h3></a>
+        <a href="shelf3.html"><h3 class="mapguide">Quezon City (Manuel D. Duldulao)</h3></a>
+        <a href="shelf3.html"><h3 class="mapguide">Quezon City Turns</h3></a>
+        <a href="shelf4.html"><h3 class="mapguide">The Harvard Classic</h3></a>
+        <a href="shelf4.html"><h3 class="mapguide">World Book</h3></a>
+    </div>
+</li>
+</li>
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Mathematics
+    <div class="info">
+        <a href="shelf5.html"><h3 class="mapguide">California Math</h3></a>
+        <a href="shelf5.html"><h3 class="mapguide">E-Math</h3></a>
+        <a href="shelf6.html"><h3 class="mapguide">(Grade 7)Skill Book in Mathematics</h3></a>
+        <a href="shelf5.html"><h3 class="mapguide">Practical Mathematics</h3></a>
+    </div>
+</li>
+</li>
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Research 
+    <div class="info">
+  
+        
+        <a href="shelf6.html"><h4 class="mapguide">Quantitaive Reasearches</h4></a>
+        
+
+    </div>
+</li>
+</li>
+
+
+
+
+<li class="bookpadding" onclick="toggleInfo(this)" style="border-color: red;">
+    Science Books
+    <div class="info">
+      
+        <a href="shelf5.html"><h3 class="mapguide">Discover Science</h3></a>
+        <a href="shelf5.html"><h3 class="mapguide">Holt Science & Technology</h3></a>
+        <a href="shelf5.html"><h3 class="mapguide">Life Science</h3></a>
+        <a href="shelf5.html"><h3 class="mapguide">Physical Science</h3></a>
+        
+    </div>
+</li>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function filterItems() {
+        const input = document.getElementById('name');
+        const filter = input.value.toLowerCase();
+        const items = document.querySelectorAll('#itemList li');
+        let bookpadding = document.querySelector(".bookpadding");
+
+        items.forEach(function(item) {
+            const links = item.querySelectorAll('.info a');
+            let categoryMatch = false;
+            let bookMatch = false;
+
+            links.forEach(function(link) {
+                const text = link.textContent || link.innerText;
+                if (text.toLowerCase().includes(filter)) {
+                    link.style.display = ""; // Show matching book
+                    bookMatch = true;
+                } else {
+                    link.style.display = "none"; // Hide non-matching book
+                }
+            });
+
+            if (bookMatch) {
+                categoryMatch = true;
+                item.style.display = ""; // Show the category if any book matches
+            } else {
+                item.style.display = "none"; // Hide the category if no books match
+            }
+        });
+    }
+
+    function toggleInfo(item) {
+        const info = item.querySelector('.info');
+        info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+    }
+
+    //additional something for warning you know what I mean right?
+    function reminder(){
+        let reminderer = document.getElementById('reminderfatherdiv');
+        reminderer.style.display = 'none';
+    }
+
+</script>
 </body>
-
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shelf.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <style>
@@ -37,7 +38,7 @@
     margin-left: 75px;
     cursor: pointer;
     left: -38px;
-   
+    z-index: 1;
   
 }
 </style>
@@ -47,31 +48,31 @@
 
     <!-- Sidebar -->
     <input type="checkbox" id="check">
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-        <img src="medias/1bhslogo.png">
-    </label>
-    <div class="sidebar">
-        <header>Menu</header>
-        <ol class="ulSidebar">
-            <li><a href="index1.html"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="/maps/one/ar.html"><i class="fas fa-book"></i>Library</a></li>
-            <li><a href="AboutUs.html"><i class="fas fa-info"></i>About</a></li>
-            <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li>
-        </ol>
-    </div>
+<label for="check">
+    <i><img src="sidebarRemovedBg.png" id="btn"/></i>
+    <i><img src="xRemovedBg.png" id="cancel"/></i>
+    <img src="1bhslogo.png">
+</label>
+<div class="sidebar"> 
+    <header>Menu</header>
+    <ol class="ulSidebar">
+        <li><a href="index.html"><i></i>Home</a></li>
+        <li><a href="ar.html"><i></i>Library</a></li>
+        <li><a href="AboutUs.html"><i></i>About</a></li>
+        <!-- <li><a href="#"><i class="fas fa-phone"></i>Contact</a></li> -->
+    </ol>
+</div>
     <header>
         <h1 id="bookseeker">BookSeeker</h1>
     </header>
 
     <div class="paper">
-        <a href="index1.html" class="back1 "  alt="Back Button"><img src="medias/back.png" class="backimg" >
-        <span class="content"> <img src="medias/map4.PNG"> </span>
+        <a href="index.html" class="back1 "  alt="Back Button"><img src="back.png" class="backimg" ></a>
+        <span class="content"> <img src="map4.PNG"> </span>
 
 
     </div>
-
+    <script src="shelf.js"></script>
 </body>
 
 </html>

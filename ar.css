@@ -17,7 +17,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin: 10%;
-  color: white;
+  color: black;
 
   /* glassmorphism */
 }
@@ -45,12 +45,12 @@ body {
 #bookseeker .bs,
 .full {
   font-size: 10vmin;
- 
+  /* background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 body {
@@ -69,16 +69,15 @@ body {
 #arrow {
   width: 30vmin;
   position: absolute;
-  left: 18vh;
-  bottom: 27vh;
+  left: 27vh;
+  bottom: 28vh;
   display: none;
-  transform: rotate(-49deg);
 }
 #shelf1Arrow {
   width: 16vmin;
   position: absolute;
   left: 12vh;
-  bottom: 78vh;
+  bottom: 74vh;   
   display: none;
   transform: rotate(89deg);
 }
@@ -91,6 +90,22 @@ body {
   top: 65vh;
   left: 17vh;
 }
+#hitbox {
+  width: 27vmin;
+  height: 74vmin;
+  position: absolute;
+  right: 0;
+  /* border: 10px solid white; */
+  top: 27vh;
+}
+#hitbox2 {
+  width: 27vmin;
+  height: 37vmin;
+  position: absolute;
+  right: 13vh;
+  border: 10px solid white;
+  top: 41vh;
+}
 #libraryH3 {
   font-size: 4vh;
   position: absolute;
@@ -98,15 +113,14 @@ body {
   top: 42vh;
   background: rgba(0, 0, 0, 0.45);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-
   width: 41vmin;
   text-align: center;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 #libraryH3In {
   position: absolute;
@@ -115,9 +129,7 @@ body {
   width: 100vw;
   text-align: center;
   height: 10vmin;
-  display: block;
-  font-size: 7vmin;
-  color: white;
+  display: none;
 }
 /* .ar img{
     width: 100%;
@@ -127,7 +139,7 @@ body {
     top: -5vh;
 } */
 #tutorial {
-  display: flex;
+    display: flex;
   position: absolute;
   font-size: 10vmin;
   right: 10vw;
@@ -141,81 +153,25 @@ body {
   text-align: center;
   transition: 0.2s;
   color: white;
+  display: none;
 }
-#tutorial,
-.bs,
-.full,
-#randombooks,
-#brownbook,
-#redbook,
-#bookshelf2,
-#bookshelf1 {
-  /* background: rgba(0, 255, 255, 0.25); */
-  background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+#tutorial, #bookseeker .bs,
+.full {
+  background: rgba( 0, 0, 0, 0.45 );
+  animation: ani 10s infinite alternate ease-in-out;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  cursor: pointer;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: white;
 }
-#back,
-#backLibrary {
+#back{
   width: 15vmin;
   position: absolute;
   right: 5vw;
   bottom: 76vh;
-  filter: invert(1);
-}
-#shelf1and2 {
-  font-size: 4vh;
-  position: absolute;
-  right: 52vw;
-  top: 25vh;
-  background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  width: fit-content;
-  text-align: center;
-  cursor: pointer;
-  color: white;
-  padding-inline: 15px;
-  font-size: 7vmin;
-}
-#shelf2and3,
-#shelf4and5,
-#shelf6 {
-  position: absolute;
-  right: 24vw;
-  top: 39vh;
-  background: rgba(0, 0, 0, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: fit-content;
-  text-align: center;
-  cursor: pointer;
-  color: white;
-  padding-inline: 15px;
-  font-size: 6vmin;
-}
-#shelf4and5 {
-  top: 24vh;
-  left: 51vw;
-  font-size: 5vmin;
-  
-}
-#shelf6 {
-  top: 33vh;
-  left: 78vw;
-  font-size: 5vmin;
+  filter: invert(0);
 }
 #tutorialMat {
   width: 100vw;
@@ -261,47 +217,4 @@ body {
 #tutorialdiv {
   display: none;
   z-index: 99;
-}
-#randombooks,
-#brownbook,
-#redbook,
-#bookshelf2,
-#bookshelf1 {
-  display: none;
-  text-align: center;
-  width: fit-content;
-  padding: 10px;
-  position: absolute;
-}
-#brownbook,
-#redbook {
-  background: rgba(107, 0, 1, 0.4);
-  left: 32vw;
-  top: 31vh;
-  font-size: 4vmin;
-}
-#redbook {
-  background: rgba(255, 0, 2, 0.4);
-  left: 3vw;
-  top: 45vh;
-  width: 42vmin;
-}
-#bookshelf1,
-#bookshelf2 {
-  top: 85vh;
-  left: 3vw;
-  width: 43vmin;
-}
-#bookshelf2 {
-  left: 55vw;
-}
-#randombooks {
-  left: 59vw;
-  top: 55vh;
-}
-#brownbook {
-  display: none;
-  left: -4vw;
-  top: 29vh;
-  width: fit-content;
 }

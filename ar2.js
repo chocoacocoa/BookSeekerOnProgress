@@ -43,42 +43,12 @@ backLibrary.onclick = function () {
         alert("backbutton is disabled boss");
     }
 }
-// bookshelf1.onclick = function(){
-//     if (isshelf2to3running){
-//         s23b1();
-//     }else{
-//         alert("im depressed");
-//     }
-// }
-// function s23b1(){
-//     shelf1and2.style.fontSize = '6vmin';
-//     console.log("shelf2 and 3 clicked.");
-//     image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
-//     backHref.href = "/maps/two/ar.html";
-//     shelf6.style.display = 'none';
-//     shelf4and5.style.display = 'none';
-//     shelf2and3.style.display = 'none';
-//     shelf1and2.style.display = 'none';
-//     libraryH3In.innerHTML = 'Library > Shelf 1-2';
-//     back.style.filter = "invert(1)";
-//     bookshelf1.style.display = 'block';
-//     bookshelf2.style.display = 'block';
-//     redbook.style.display = 'none';
-//     brownbook.style.display = 'none';
-//     randombooks.style.left = 'unset';
-//     randombooks.style.top = '77vh';
-//     randombooks.style.width = '100vw';
-//     randombooks.style.borderRadius = 'unset';
-//     randombooks.style.display = 'block';
-//     bookshelf1.style.opacity = '1.0';
-//     bookshelf2.style.opacity = '0.5';
-// }
 backLibrary.style.display = 'none';
 function shelf1to2(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf1 and 2 clicked.");
-    image.src = '/AR/arMedias/POVs/vertical/3.1.jpg';
-    backHref.href = "/maps/two/ar.html";
+    image.src = '3.1.jpg';
+    backHref.href = "ar2.html";
     shelf6.style.display = 'none';
     shelf4and5.style.display = 'none';
     shelf2and3.style.display = 'none';
@@ -116,8 +86,8 @@ function X(){
 function shelf2to3(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf2 and 3 clicked.");
-    image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
-    backHref.href = "/maps/two/ar.html";
+    image.src = '4.1.jpg';
+    backHref.href = "ar2.html";
     shelf6.style.display = 'none';
     shelf4and5.style.display = 'none';
     shelf2and3.style.display = 'none';
@@ -149,26 +119,8 @@ function shelf2to3(){
         shelf2to3();
     }
 }
-// function shelf4to5onclick(){
-//     shelf1and2.style.fontSize = '6vmin';
-//     console.log("shelf2 and 3 clicked.");
-//     image.src = '/AR/arMedias/POVs/vertical/4.1.jpg';
-//     backHref.href = "/maps/two/ar.html";
-//     shelf6.style.display = 'none';
-//     shelf4and5.style.display = 'none';
-//     shelf2and3.style.display = 'none';
-//     shelf1and2.style.display = 'none';
-//     libraryH3In.innerHTML = 'Library > Shelf 1-2';
-//     back.style.filter = "invert(1)";
-
-//     bookshelf1.style.display = 'block';
-//     bookshelf2.style.display = 'block';
-//     redbook.style.display = 'block';
-//     brownbook.style.display = 'block';
-//     randombooks.style.display = 'block';
-// }
 function bookshelf11(){
-    image.src = "/AR/arMedias/POVs/vertical/3.1.1.jpg";
+    image.src = "3.1.1.jpg";
     bookshelf1.style.display = 'block';
     bookshelf2.style.display = 'block';
     redbook.style.display = 'block';
@@ -184,7 +136,7 @@ function bookshelf11(){
     bookshelf2.style.opacity = '0.5';
 }
 function bookshelf22(){
-    image.src = '/AR/arMedias/POVs/vertical/3.1.2.jpg';
+    image.src = '3.1.2.jpg';
     redbook.style.display = 'none';
     brownbook.style.display = 'none';
     isbacklibraryrunning = true;
@@ -203,7 +155,7 @@ function bookshelf22(){
     }
 }
 function bookshelf1inshelf23(){
-    image.src = '/AR/arMedias/POVs/vertical/phmap.jpg';
+    image.src = 'phmap.jpg';
     redbook.style.display = 'none';
     brownbook.style.display = 'none';
     isbacklibraryrunning = false;
@@ -228,8 +180,8 @@ function bookshelf1inshelf23(){
 function shelf4to5(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf2 and 3 clicked.");
-    image.src = '/AR/arMedias/POVs/vertical/5.jpg';
-    backHref.href = "/maps/two/ar.html";
+    image.src = '5.jpg';
+    backHref.href = "ar2.html";
     shelf6.style.display = 'none';
     shelf4and5.style.display = 'none';
     shelf2and3.style.display = 'none';
@@ -255,14 +207,14 @@ function shelf4to5(){
         shelf4to5();
     }
     bookshelf1.onclick = function (){
-        image.src = "/AR/arMedias/POVs/vertical/5.1.jpg";
+        image.src = "5.1.jpg";
         bookshelf2.style.opacity = '0.5';
     bookshelf1.style.opacity = '1.0';
     backLibrary.style.display = 'block';
     libraryH3In.innerHTML = 'Library > Shelf 4';
     }
     bookshelf2.onclick = function () {
-        image.src = "/AR/arMedias/POVs/vertical/5.2.jpg";
+        image.src = "5.2.jpg";
         bookshelf2.style.opacity = '1.0';
     bookshelf1.style.opacity = '0.5';
     backLibrary.style.display = 'block';
@@ -272,8 +224,8 @@ function shelf4to5(){
 function shelf6click(){
     shelf1and2.style.fontSize = '6vmin';
     console.log("shelf2 and 3 clicked.");
-    image.src = '/AR/arMedias/POVs/vertical/6.jpg';
-    backHref.href = "/maps/two/ar.html";
+    image.src = '6.jpg';
+    backHref.href = "ar2.html";
     shelf6.style.display = 'none';
     shelf4and5.style.display = 'none';
     shelf2and3.style.display = 'none';
@@ -302,21 +254,21 @@ function shelf6click(){
         shelf6();
     }
     bookshelf1.onclick = function (){
-        image.src = "/AR/arMedias/POVs/vertical/5.1.jpg";
+        image.src = "5.1.jpg";
         bookshelf2.style.opacity = '0.5';
     bookshelf1.style.opacity = '1.0';
     backLibrary.style.display = 'block';
     libraryH3In.innerHTML = 'Library > Shelf 4';
     }
     bookshelf2.onclick = function () {
-        image.src = "/AR/arMedias/POVs/vertical/5.2.jpg";
+        image.src = "5.2.jpg";
         bookshelf2.style.opacity = '1.0';
     bookshelf1.style.opacity = '0.5';
     backLibrary.style.display = 'block';
     libraryH3In.innerHTML = 'Library > Shelf 5';
     }
     redbook.onclick = function (){
-        image.src = "/AR/arMedias/POVs/vertical/6.2.jpg";
+        image.src = "6.2.jpg";
         redbook.style.display = 'none';
         back.style.display = 'block';
         backLibrary.style.display = 'block';
@@ -326,7 +278,7 @@ function shelf6click(){
     }
     function hrefToHome() {
         if (confirm("Continue to homepage?")) {
-            window.location.href = "/index1.html";
+            window.location.href = "/index.html";
         } else {
             return;
         }
