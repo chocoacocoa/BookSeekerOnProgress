@@ -276,7 +276,5 @@ function shelf6click(){
             shelf6click();
         }
     }
-    function hrefToHome() {
-        window.location.href = "index.html";
-    }
+    
 }

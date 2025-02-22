@@ -77,7 +77,7 @@ ul {
   /*books list*/
 }
 
-ol {
+#itemList{
   list-style-type: none;
   padding: 0;
   margin-top: 20px;

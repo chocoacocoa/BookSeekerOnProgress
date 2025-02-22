@@ -9,6 +9,3 @@ const back = document.getElementsByClassName('back1');
 //         backimg.style.zIndex = '1';
 //     }
 // });
-back.addEventListener('click', function(){
-    
-});
