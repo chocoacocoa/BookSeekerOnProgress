@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="ar2.css" />
     <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <meta charset="UTF-8">
@@ -33,6 +33,18 @@
             Shelf 1-2
         </h3>
     </a>
+    <div id="RBSMotherContainer">
+        <div class="RBSContainer">
+            <button id="RBSButton">
+                list
+            </button>
+            </div>
+       
+        <div class="randomBooksSidebar" id="RBS">
+            <button id="RBSClose">Close</button>
+            <p>hello</p>
+        </div>
+    </div>
     <a href="#">
         <h3 onclick="shelf2to3()" id="shelf2and3">
             Shelf 2-3
@@ -56,14 +68,14 @@
 
         </div>
     </div>
-    
-        <h3 onclick="bookshelf11()" id="bookshelf1">
-            bookshelf 1
-        </h3>
-        <h3 onclick="bookshelf22()" id="bookshelf2">
-            bookshelf 2
-        </h3>
-    
+
+    <h3 onclick="bookshelf11()" id="bookshelf1">
+        bookshelf 1
+    </h3>
+    <h3 onclick="bookshelf22()" id="bookshelf2">
+        bookshelf 2
+    </h3>
+
 
     <h3 onclick="bookshelf33()" id="redbook">
         Batayang Aklat sa Araling Panlipunan
@@ -84,4 +96,5 @@
         window.location.href = "index.html";
     }
 </script>
+
 </html>

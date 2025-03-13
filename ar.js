@@ -1,3 +1,4 @@
+console.log('connected ar.js');
 let image = document.getElementById("one");
 let arrow = document.getElementById("arrow");
 let hitboxers = document.getElementById("hitbox");
@@ -58,4 +59,23 @@ function tutorialOnClick() {
     arrow.style.display = 'none';
   }
 }
+
+// mediaquery
+// const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+// function handleScreenChange(event) {
+//     if (event.matches) {
+//         console.log('Screen is 768px or smaller');
+//     } else {
+//         console.log('Screen is larger than 768px');
+//     }
+// }
+
+// // Call the function when the script loads
+// handleScreenChange(mediaQuery);
+
+// // Listen for changes
+// mediaQuery.addEventListener('change', handleScreenChange);
+
+// console.log('hello?');
 

@@ -1,3 +1,5 @@
+console.log('connected ar2.js');
+
 let image = document.getElementById("one");
 let arrow = document.getElementById("arrow");
 let arrow1 = document.getElementById("shelf1Arrow");
@@ -22,9 +24,10 @@ let backLibrary = document.getElementById("backLibrary");
 let isbacklibraryrunning = false;
 let isshelf2to3running = false;
 let locationfunction;
-
-
-
+let RBS = document.getElementById('RBS');
+let RBSButton = document.getElementById('RBSButton');
+let RBSClose = document.getElementById('RBSClose');
+let RBSMotherContainer = document.getElementById('RBSMotherContainer');
 
 bookshelf1.style.opacity = '1.0';
 bookshelf2.style.opacity = '1.0';
@@ -39,6 +42,7 @@ function tutorialOnClick(){
 backLibrary.onclick = function () {
     if (isbacklibraryrunning){
         shelf1to2();
+        RBSMotherContainer.style.display = 'none';
     }else{
         alert("backbutton is disabled boss");
     }
@@ -132,8 +136,10 @@ function bookshelf11(){
     back.style.display = "none";
     isbacklibraryrunning = true;
     backLibrary.style.display = 'block';
-    bookshelf1.style.opacity = '1.0';
+    bookshelf1.style.opacity = '1.0';document.getElementById('RBSButton');
+    let RBSClose = 
     bookshelf2.style.opacity = '0.5';
+    RBSMotherContainer.style.display = 'none';
 }
 function bookshelf22(){
     image.src = '3.1.2.jpg';
@@ -150,6 +156,7 @@ function bookshelf22(){
     randombooks.style.display = 'block';
     bookshelf2.style.opacity = '1.0';
     bookshelf1.style.opacity = '0.5';
+    RBSMotherContainer.style.display = 'block';
     bookshelf11.onclick = function(){
         bookshelf1inshelf23();
     }
@@ -179,7 +186,8 @@ function bookshelf1inshelf23(){
 
 function shelf4to5(){
     shelf1and2.style.fontSize = '6vmin';
-    console.log("shelf2 and 3 clicked.");
+    console.log("shelf2 and 3 clicked.");document.getElementById('RBSButton');
+    let RBSClose = 
     image.src = '5.jpg';
     backHref.href = "ar2.html";
     shelf6.style.display = 'none';
@@ -277,4 +285,36 @@ function shelf6click(){
         }
     }
     
+}
+// mediaquery
+const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+function handleScreenChange(event) {
+    if (event.matches) {
+        console.log('Screen is in PC VERSION');
+        
+
+    } else {
+        console.log('Screen is in the mobile version');
+    }
+}
+
+function changes(kaganapan){
+    if(kaganapan.matches){
+
+    }
+}
+// Call the function when the script loads
+handleScreenChange(mediaQuery);
+
+// Listen for changes
+mediaQuery.addEventListener('change', handleScreenChange);
+
+console.log('hello?');
+
+RBSButton.onclick = function(){
+    RBS.style.left = '0em';
+}
+RBSClose.onclick = function(){
+    RBS.style.left = '-100em';
 }

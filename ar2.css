@@ -45,7 +45,7 @@ body {
 #bookseeker .bs,
 .full {
   font-size: 10vmin;
- 
+
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
@@ -125,7 +125,7 @@ body {
   position: absolute;
   font-size: 10vmin;
   right: 10vw;
-  
+
   width: fit-content;
   text-align: center;
   transition: 0.2s;
@@ -199,7 +199,6 @@ body {
   top: 24vh;
   left: 51vw;
   font-size: 5vmin;
-  
 }
 #shelf6 {
   top: 33vh;
@@ -293,4 +292,40 @@ body {
   left: -4vw;
   top: 29vh;
   width: fit-content;
+}
+.randomBooksSidebar {
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  left: -100em;
+  top: 0;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  z-index: 99;
+  transition: 0.2s ease-in-out;
+}
+#RBSClose {
+  position: absolute;
+  right: 0;
+  background: red;
+  border-top-right-radius: 10px;
+  width: 18vmin;
+  font-size: 5vmin;
+}
+.RBSContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+#RBSMotherContainer{
+  display: none;
 }
